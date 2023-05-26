@@ -20,3 +20,21 @@
 // }
 
 // Ввывести числа Фибоначчи без использования рекурсии.
+int f_prefinal = 0;
+int f_final = 1;
+Console.Write($"{f_prefinal}, ");
+Console.Write($"{f_final}, ");
+
+for(int i = 0; i < 40; i++) 
+{
+    int f_next = GetFibonachiNextTerm(f_prefinal, f_final);
+    Console.Write($"{f_next}, ");
+    f_prefinal = f_final;
+    f_final = f_next;
+}
+
+int GetFibonachiNextTerm(int f_prefinal, int f_final)
+{
+    int f_next;
+    return f_next = f_prefinal + f_final;
+}
